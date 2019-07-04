@@ -15,6 +15,11 @@ def read_users(filename):
     return objects["users"]
 
 
+@app.route('/healthcheck', methods=['GET'])
+def health_check():
+    return jsonify({"status": "OK"})
+
+
 @app.route('/users', methods=['GET'])
 def get_users():
     return jsonify(USERS)
