@@ -11,6 +11,3 @@ COPY user-service.py .
 COPY users.json .
 
 CMD [ "python", "./user-service.py" ]
-
-
-
